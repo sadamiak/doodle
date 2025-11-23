@@ -1,0 +1,28 @@
+.shell {
+  background: url("/src/assets/Body BG.png") var(--color-bg);
+  background-size: auto;
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+}
+
+.header {
+  display: none;
+}
+
+.errorBanner {
+  background: var(--color-danger);
+  color: var(--color-bg-white);
+  padding: 0.75rem var(--spacing-2xl);
+  font-size: var(--font-size-md);
+  text-align: center;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}

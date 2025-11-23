@@ -10,7 +10,6 @@ const MessageSkeleton = ({ align = 'left' }: MessageSkeletonProps) => (
     className={clsx(styles.skeleton, align === 'right' && styles.right)}
     aria-hidden="true"
   >
-    <div className={styles.avatar} />
     <div className={styles.body}>
       <div className={styles.line} />
       <div className={clsx(styles.line, styles.lineShort)} />

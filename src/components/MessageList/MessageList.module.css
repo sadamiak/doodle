@@ -1,0 +1,31 @@
+.list {
+  flex: 1;
+  padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-md) var(--spacing-2xl);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+}
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+  max-width: 640px;
+}
+
+.spacer {
+  height: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.loadingOlder {
+  width: 100%;
+  max-width: 640px;
+  padding-bottom: var(--spacing-md);
+}

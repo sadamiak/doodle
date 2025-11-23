@@ -1,0 +1,18 @@
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-4xl) var(--spacing-2xl);
+  color: var(--color-text-muted);
+}
+
+.title {
+  margin: 0 0 var(--spacing-md);
+  font-weight: 500;
+  font-size: var(--font-size-xl);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--font-size-base);
+}
