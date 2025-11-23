@@ -1,6 +1,6 @@
 .list {
   flex: 1;
-  padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-md) var(--spacing-2xl);
+  padding: var(--spacing-3xl) var(--spacing-3xl) var(--spacing-xl);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -17,11 +17,6 @@
   gap: var(--spacing-sm);
   width: 100%;
   max-width: 640px;
-}
-
-.spacer {
-  height: var(--spacing-xs);
-  flex-shrink: 0;
 }
 
 .loadingOlder {

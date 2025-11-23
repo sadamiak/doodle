@@ -207,7 +207,6 @@ const MessageList = ({
           )
         })}
       </ul>
-      <div className={styles.spacer} aria-hidden="true" />
     </div>
   )
 }

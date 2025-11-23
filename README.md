@@ -1,5 +1,12 @@
 Minimal node version: 22.12.0
 
+Next steps:
+
+- containerization with Docker
+- setup CI/CD with GitHub Actions
+- virtualization of message list for performance improvement
+- more tests
+
 ###############################################
 
 #
