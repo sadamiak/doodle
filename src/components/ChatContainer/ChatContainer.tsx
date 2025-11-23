@@ -1,14 +1,30 @@
 import MessageList from '../MessageList/MessageList'
 import MessageComposer from '../MessageComposer/MessageComposer'
+import { useChatMessages } from '../../hooks/useChatMessages'
 import styles from './ChatContainer.module.css'
 
+const DEFAULT_AUTHOR = 'Szymon Adamiak'
+
 const ChatContainer = () => {
-  const error = {
-    message: ""
-  };
-  const sendError = {
-    message: ""
-  };
+  const {
+    messages,
+    isLoading,
+    error,
+    sendMessage,
+    sending,
+    sendError,
+    fetchOlderMessages,
+    hasOlderMessages,
+    isFetchingOlder,
+  } = useChatMessages()
+  const author = DEFAULT_AUTHOR;
+
+  const handleSend = async (body: string) => {
+    await sendMessage({
+      author: author.trim() || DEFAULT_AUTHOR,
+      message: body,
+    })
+  }
 
   return (
     <div className={styles.shell}>
@@ -27,8 +43,18 @@ const ChatContainer = () => {
       )}
 
       <main id="main-content" className={styles.card} aria-label="Chat conversation">
-        <MessageList />
-        <MessageComposer onSend={async (message) => {}} sending={false} />
+        <MessageList 
+          messages={messages} 
+          currentAuthor={author} 
+          isLoading={isLoading}
+          isFetchingOlder={isFetchingOlder}
+          hasOlderMessages={hasOlderMessages}
+          onLoadOlder={fetchOlderMessages}
+        />
+        <MessageComposer
+          onSend={handleSend}
+          sending={sending}
+        />
       </main>
     </div>
   )
