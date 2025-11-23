@@ -28,7 +28,7 @@ const ChatContainer = () => {
 
       <main id="main-content" className={styles.card} aria-label="Chat conversation">
         <MessageList />
-        <MessageComposer/>
+        <MessageComposer onSend={async (message) => {}} sending={false} />
       </main>
     </div>
   )
